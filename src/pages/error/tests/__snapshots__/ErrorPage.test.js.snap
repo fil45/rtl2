@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage ---> should match snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h2>
+      404 ERROR
+    </h2>
+  </div>
+</DocumentFragment>
+`;

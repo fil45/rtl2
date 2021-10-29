@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User page ---> should match snapshot 1`] = `
+<DocumentFragment>
+  <li>
+    <p>
+      1 Alex Hodovas
+    </p>
+    <button>
+      Delete
+    </button>
+  </li>
+</DocumentFragment>
+`;

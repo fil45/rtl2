@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component ---> should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+  >
+    <div
+      class="brand"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        <img
+          alt="logo"
+          src="octopus.png"
+          width="25"
+        />
+        <span>
+          REACT TESTING LIBRARY DEMO
+        </span>
+      </a>
+    </div>
+    <nav>
+      <a
+        href="/users"
+      >
+        Users
+      </a>
+      <a
+        href="/redux"
+      >
+        Redux
+      </a>
+      <a
+        href="/context"
+      >
+        Context
+      </a>
+    </nav>
+  </div>
+</DocumentFragment>
+`;

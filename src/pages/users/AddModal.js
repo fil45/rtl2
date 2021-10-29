@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "components/Modal";
+import Modal from "../../components/Modal/Modal";
 
 export default function AddModal({ isOpen, onOk, onCancel }) {
   const [firstname, setFirstname] = useState("");
@@ -70,6 +70,7 @@ export default function AddModal({ isOpen, onOk, onCancel }) {
               onChange={onChange}
               className={errors.includes("firstname") ? "invalid-input" : ""}
               autoFocus
+              data-testid="modal_firstname"
             />
           </label>
 
@@ -81,6 +82,7 @@ export default function AddModal({ isOpen, onOk, onCancel }) {
               value={lastname}
               onChange={onChange}
               className={errors.includes("lastname") ? "invalid-input" : ""}
+              data-testid="modal_lastname"
             />
           </label>
 
@@ -94,15 +96,16 @@ export default function AddModal({ isOpen, onOk, onCancel }) {
               onChange={onChange}
               min="0"
               max="99"
+              data-testid="modal_age"
             />
           </label>
 
           <label>
             Gender
-            <select name="gender" value={gender} onChange={onChange}>
+            <select name="gender" value={gender} onChange={onChange} data-testid="modal_gender">
               <option value=""></option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
+              <option value="Male" data-testid="modal_gender_male">Male</option>
+              <option value="Female" data-testid="modal_gender_female">Female</option>
             </select>
           </label>
 
