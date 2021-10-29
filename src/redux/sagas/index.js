@@ -1,4 +1,11 @@
-import { call, put, takeLatest, fork, takeEvery } from "redux-saga/effects";
+import {
+  call,
+  put,
+  takeLatest,
+  spawn,
+  takeEvery,
+  all,
+} from "redux-saga/effects";
 import { actionTypes, actions, defaultState } from "../index";
 const axios = require("axios");
 const fetchUsers = () => axios.get("http://localhost:3001/users");
@@ -26,6 +33,20 @@ function* watcherSagaResetState() {
 }
 
 export default function* rootSaga() {
-  yield fork(watcherSagaGetUsers);
-  yield fork(watcherSagaResetState);
+  const sagas = [watcherSagaGetUsers, watcherSagaResetState];
+
+  const retrySagas = yield sagas.map((saga) =>
+    spawn(function* () {
+      while (true) {
+        try {
+          yield call(saga);
+          break;
+        } catch (e) {
+          console.log("err in rootSaga", e);
+        }
+      }
+    })
+  );
+
+  yield all(retrySagas);
 }
