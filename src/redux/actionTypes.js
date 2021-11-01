@@ -1,0 +1,8 @@
+const actionTypes = {
+  GET_USERS: "GET_USERS",
+  GET_USERS_SUCCESS: "GET_USERS_SUCCESS",
+  RESET_STATE: "RESET_STATE",
+  RESET_STATE_SUCCESS: "RESET_STATE_SUCCESS",
+};
+
+export default actionTypes;

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import User from "./User";
 import AddModal from "./AddModal";
-import useFetch from "hooks/useFetch";
-import { baseUrl } from "const";
+import useFetch from "../../hooks/useFetch";
+import { baseUrl } from "../../const";
 
 export default function UsersPage() {
   const { data: users, isLoading, error, refetch } = useFetch(baseUrl);

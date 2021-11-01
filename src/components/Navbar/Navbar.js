@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "assets/octopus.png";
+import logo from "../../assets/octopus.png";
 
 export default function Navbar() {
   return (

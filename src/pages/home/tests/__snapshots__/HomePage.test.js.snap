@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage ---> should match snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h2>
+      WELCOME TO REACT TESTING LIBRARY DEMO!
+    </h2>
+    <iframe
+      src="https://testing-library.com/docs/react-testing-library/intro/"
+      title="RTL"
+    />
+  </div>
+</DocumentFragment>
+`;

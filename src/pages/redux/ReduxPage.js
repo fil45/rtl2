@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { resetState } from "store";
-import { fetchUsers } from "asyncActions";
+import { actions } from "../../redux";
 
 export default function ReduxPage() {
   const dispatch = useDispatch();
@@ -13,8 +12,8 @@ export default function ReduxPage() {
       <h2>REDUX</h2>
 
       <div className="users">
-        <button onClick={() => dispatch(fetchUsers())}>GET USERS</button>
-        <button onClick={() => dispatch(resetState())}>RESET STATE</button>
+        <button onClick={() => dispatch(actions.getUsers())}>GET USERS</button>
+        <button onClick={() => dispatch(actions.resetState())}>RESET STATE</button>
 
         {isLoading && <p>Loading ...</p>}
         {!users.length && !isLoading && <p>No users</p>}

@@ -5,7 +5,7 @@ import UsersPage from "pages/users/UsersPage";
 import ReduxPage from "pages/redux/ReduxPage";
 import ContextPage from "pages/context/ContextPage";
 import ErrorPage from "pages/error/ErrorPage";
-import Navbar from "components/Navbar";
+import Navbar from "components/Navbar/Navbar";
 
 export default function Router() {
   return (

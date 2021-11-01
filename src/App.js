@@ -1,6 +1,6 @@
 import "App.css";
 import { Provider } from "react-redux";
-import { store } from "store";
+import { store } from "./redux";
 import Router from "Router";
 import SelectedUsersContextProvider from "SelectedUsersContextProvider";
 
